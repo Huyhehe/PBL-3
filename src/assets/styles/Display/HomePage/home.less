@@ -1,0 +1,140 @@
+@import "~@/assets/variables.less";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.home {
+  box-sizing: border-box;
+  position: relative;
+
+  .home-container {
+    padding: 1.5rem 50px;
+    .employee-row {
+      cursor: pointer;
+      &:hover {
+        background-color: #dddddd;
+      }
+    }
+
+    .home-container-title {
+      font-size: 2.5rem;
+      color: @primary-text-color-light;
+      padding: 0.5rem 0;
+      margin-bottom: 2rem;
+      text-align: center;
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 1px;
+        width: 100%;
+        background-color: #c3d1e3;
+      }
+    }
+
+    .search-form {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+      form {
+        margin-left: auto;
+        input {
+          font-size: 16px;
+          height: 30px;
+          padding: 0 10px;
+          outline: none;
+          border: 1px solid #dddddd;
+          transition: all 0.3s ease;
+
+          &:hover,
+          &:focus {
+            border: 1px solid black;
+          }
+        }
+      }
+      button {
+        border: 1px solid #dddddd;
+        background-color: transparent;
+        color: #858484;
+        font-size: 18px;
+        padding: 5px 10px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        &:hover {
+          border: 1px solid black;
+          color: black;
+        }
+      }
+    }
+  }
+
+  .add-view {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transform: translateX(100%);
+    background-color: #ffffff;
+    transition: all 0.5s ease;
+  }
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 50px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  box-sizing: border-box;
+
+  thead {
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    th {
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+  }
+
+  tbody {
+    #td-id {
+      width: 5%;
+    }
+  }
+}
+
+td,
+th {
+  text-align: left;
+  padding: 10px 20px;
+}
+
+.manager-only {
+  margin-top: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  h1 {
+    height: fit-content;
+    font-size: 100px;
+    color: @error-color;
+  }
+}
+
+.is-online {
+  color: @success-color;
+}
+.is-offline {
+  color: @error-color;
+}
+
+.disable {
+  display: none;
+}
+
+// SINGLE DISPLAY

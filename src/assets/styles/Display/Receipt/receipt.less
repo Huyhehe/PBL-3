@@ -1,0 +1,488 @@
+@import "~@/assets/variables.less";
+* {
+  margin: 0;
+  padding: 0;
+}
+.receipt {
+  display: flex;
+  flex-direction: column;
+  padding: 1.25rem 50px;
+  position: relative;
+
+  .receipt-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem 0;
+    position: relative;
+    margin-bottom: 2rem;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 1px;
+      background-color: #c3d1e3;
+    }
+
+    span {
+      font-size: 2.5rem;
+      color: @primary-text-color-light;
+    }
+  }
+
+  .receipt-display {
+    .receipt-add-button {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 10px;
+      border: 1px solid @primary-text-color-light;
+      width: fit-content;
+      border-radius: 5px;
+      padding: 5px;
+      cursor: pointer;
+      color: @primary-text-color-light;
+      margin-bottom: 2rem;
+      transition: all 0.3s ease;
+
+      .unicon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        fill: @primary-text-color-light;
+      }
+
+      &:hover {
+        background-color: @primary-text-color-light-hover;
+        color: @background-color-light;
+
+        .unicon {
+          fill: @background-color-light;
+        }
+      }
+    }
+
+    .receipt-content {
+      display: flex;
+      gap: 20px;
+      .receipt-box-view {
+        height: 70vh;
+        overflow: auto;
+        width: 35%;
+
+        .receipt-box {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          min-height: 125px;
+          margin-bottom: 1rem;
+          background-color: @background-color-light;
+          border-radius: 5px;
+          color: @primary-text-color-light;
+          padding: 5px 1rem;
+          cursor: pointer;
+
+          .receipt-title {
+            span {
+              font-weight: bold;
+            }
+          }
+
+          .receipt-main {
+            display: flex;
+            flex-direction: column;
+          }
+        }
+      }
+
+      .receipt-box-barrier {
+        width: 2px;
+        height: 70vh;
+        background-color: @primary-text-color-light-hover;
+      }
+
+      .receipt-box-board {
+        display: flex;
+        flex-direction: column;
+        width: calc(100% - 35% - 2px);
+        gap: 20px;
+        height: 70vh;
+
+        .search-box {
+          display: flex;
+          gap: 20px;
+
+          .input-box {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            width: 14rem;
+            // height: 50px;
+            span {
+              font-weight: bold;
+              color: @primary-text-color-light;
+            }
+            input {
+              width: 100%;
+              padding: 5px 12px;
+              font-size: 1rem;
+              outline: none;
+              border: 1px solid @primary-text-color-light;
+              border-radius: 5px;
+              background-color: transparent;
+
+              &:focus {
+                border-color: @primary-text-color-light-hover;
+              }
+            }
+            .ant-calendar-picker {
+              height: 36px;
+            }
+          }
+          .button-box {
+            margin-top: auto;
+            padding: 4.5px 0;
+            display: flex;
+            gap: 10px;
+            button {
+              border: 1px solid @primary-text-color-light-hover;
+              color: @primary-text-color-light-hover;
+              background-color: transparent;
+              border-radius: 5px;
+              padding: 4.5px 2rem;
+              cursor: pointer;
+              transition: all 0.3s ease;
+
+              &:hover {
+                background-color: @primary-text-color-light-hover;
+                color: @background-color-light;
+              }
+            }
+          }
+        }
+
+        .display-box {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          flex-grow: 1;
+
+          .display-box-item {
+            height: 400px;
+            table {
+              border-collapse: collapse;
+              width: 100%;
+              box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+              box-sizing: border-box;
+
+              thead {
+                box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+                th {
+                  text-transform: uppercase;
+                  letter-spacing: 2px;
+                }
+              }
+              td,
+              th {
+                text-align: left;
+                padding: 10px 20px;
+              }
+            }
+          }
+
+          .final-info {
+            display: flex;
+            justify-content: space-between;
+            .final-info-money {
+              display: flex;
+              flex-direction: column;
+              align-items: flex-end;
+              span {
+                font-size: 1.5rem;
+                color: @primary-text-color-light-hover;
+              }
+              #red {
+                color: @error-color;
+              }
+              #green {
+                color: @success-color;
+              }
+            }
+            .final-info-button {
+              display: flex;
+              align-items: flex-end;
+              button {
+                border: 1px solid @primary-text-color-light-hover;
+                color: @primary-text-color-light-hover;
+                background-color: transparent;
+                border-radius: 5px;
+                padding: 4.5px 2rem;
+                cursor: pointer;
+                transition: all 0.3s ease;
+                font-size: 1.25rem;
+
+                &:hover {
+                  background-color: @primary-text-color-light-hover;
+                  color: @background-color-light;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .receipt-add {
+    display: flex;
+    gap: 20px;
+    box-sizing: border-box;
+    overflow: hidden;
+    position: absolute;
+    z-index: 100;
+    background-color: #ffffff;
+    left: 0;
+    bottom: 0;
+    height: 89.5vh;
+    width: 100%;
+    padding: 1.25rem 50px;
+    transform: translateX(100%);
+    transition: all 0.5s ease;
+
+    .adding-header {
+      position: absolute;
+      top: 0;
+      button {
+        display: flex;
+        align-items: center;
+        background-color: transparent;
+        text-decoration: underline;
+        border: none;
+        gap: 0;
+        transition: all 0.3s ease;
+        cursor: pointer;
+        color: @primary-text-color-light;
+
+        .unicon {
+          height: 24px;
+          fill: @primary-text-color-light;
+        }
+
+        &:hover {
+          gap: 5px;
+          color: @primary-text-color-light-hover;
+          .unicon {
+            fill: @primary-text-color-light-hover;
+          }
+        }
+      }
+    }
+
+    .receipt-info {
+      display: flex;
+      flex-direction: column;
+      padding: 1rem 2rem;
+      gap: 2rem;
+      width: 30%;
+
+      .receipt-info-form {
+        padding-bottom: 2.5rem;
+        position: relative;
+        &::after {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 50%;
+          width: 115%;
+          height: 1px;
+          background-color: @primary-text-color-light;
+          transform: translateX(-50%);
+        }
+
+        form {
+          display: flex;
+          flex-direction: column;
+          gap: 2rem;
+          //   border: 1px solid black;
+
+          .receipt-info-form-item {
+            display: flex;
+            flex-direction: column;
+
+            label {
+              font-weight: bold;
+              color: @primary-text-color-light;
+            }
+
+            input {
+              padding: 5px;
+              font-size: 1.25rem;
+              outline: none;
+              border: 1px solid @primary-text-color-light;
+              border-radius: 5px;
+
+              &:focus {
+                border-color: @primary-text-color-light-hover;
+              }
+            }
+          }
+        }
+      }
+
+      .receipt-info-total {
+        font-size: 1.75rem;
+        color: @primary-text-color-light;
+      }
+
+      .receipt-info-button {
+        display: flex;
+        justify-content: flex-end;
+        button {
+          font-size: 1.25rem;
+          padding: 10px 40px;
+          background-color: transparent;
+          border: 1px solid @primary-text-color-light-hover;
+          border-radius: 8px;
+          color: @primary-text-color-light-hover;
+          cursor: pointer;
+          transition: all 0.3s ease;
+
+          &:hover {
+            background-color: @primary-text-color-light-hover;
+            color: @background-color-light;
+          }
+        }
+      }
+    }
+
+    .receipt-cart {
+      flex-grow: 1;
+      padding: 0 2rem;
+      overflow: auto;
+
+      .receipt-cart-item {
+        width: 100%;
+        height: 150px;
+        border-left: 8px solid @primary-text-color-light-hover;
+        background-color: @background-color-light;
+        margin-bottom: 20px;
+        display: flex;
+        .receipt-cart-item-image {
+          width: 150px;
+          height: 150px;
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+
+        .receipt-cart-item-info {
+          flex-grow: 1;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          font-size: 1rem;
+          padding: 0 1.75rem;
+
+          span,
+          div {
+            width: fit-content;
+            color: @primary-text-color-light;
+          }
+
+          .type {
+            font-weight: bold;
+            color: #2c3e50;
+          }
+
+          .quantity-box {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            .quantity-box-buttons {
+              display: flex;
+              gap: 5px;
+
+              button {
+                height: 100%;
+                width: 1.5rem;
+                padding: 0;
+                border: none;
+                border-radius: 5px;
+                box-sizing: border-box;
+                font-size: 1.5rem;
+                line-height: 100%;
+                cursor: pointer;
+
+                &:hover {
+                  background-color: @primary-text-color-light-hover;
+                  color: @background-color-light;
+                }
+              }
+            }
+          }
+        }
+
+        .receipt-cart-item-button {
+          width: 7%;
+
+          button {
+            width: 100%;
+            height: 100%;
+            border: none;
+            cursor: pointer;
+            background-color: #fc4445;
+            transition: all 0.3s ease;
+
+            &:hover {
+              background-color: @error-color;
+            }
+
+            .unicon {
+              fill: @background-color-light;
+            }
+          }
+        }
+      }
+    }
+
+    .line-barrier {
+      width: 1px;
+      height: 100%;
+      background-color: @primary-text-color-light-hover;
+    }
+  }
+
+  .single-receipt-display {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.2);
+    z-index: 100;
+  }
+}
+
+// @media screen and (max-width: 1520px) {
+//   .receipt {
+//     .receipt-display {
+//       .receipt-content {
+//         .receipt-box-board {
+//           .search-box {
+//             .button-box {
+//               button {
+//                 padding: 4.5px 2rem;
+//               }
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
+// }

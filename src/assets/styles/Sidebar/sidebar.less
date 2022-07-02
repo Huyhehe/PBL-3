@@ -1,0 +1,191 @@
+@import "~@/assets/variables.less";
+
+.sidebar {
+  height: inherit;
+  width: 300px;
+  transition: all 0.3s ease;
+  overflow: hidden;
+  background-color: @background-color-light;
+  font-family: "Roboto", sans-serif;
+  color: @primary-text-color-light;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  @media screen and (max-width: 1024px) {
+    max-width: 270px;
+  }
+
+  .sidebar-item {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    font-size: 1.125rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    fill: @primary-text-color-light;
+  }
+
+  .sidebar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 2rem;
+    transition: all 0.3s ease;
+
+    .user-name-tag {
+      transition: all 0.3s ease;
+      font-size: 1.25rem;
+      cursor: default;
+    }
+    #menu-button {
+      padding: 1rem;
+      display: flex;
+      justify-content: right;
+
+      .unicon {
+        padding: 5px;
+        border: none;
+        border-radius: 5px;
+        &:hover {
+          fill: @primary-text-color-light-hover;
+        }
+      }
+    }
+  }
+
+  .sidebar-body {
+    width: 100%;
+    height: 90%;
+    display: flex;
+    justify-content: right;
+    flex-direction: column;
+    justify-content: right;
+    padding: 0 0 0 1rem;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+
+    .sidebar-item {
+      text-decoration: none;
+      padding: 1rem;
+      margin: 5px 0;
+      transition: width 0.3s ease;
+      transition: gap 0.3s ease;
+      color: @primary-text-color-light;
+      gap: 20px;
+      .sidebar-item-text {
+        display: flex;
+        gap: 20px;
+        opacity: 1;
+        transition: width 0.3s ease;
+        width: calc(100% - 50px);
+        overflow: hidden;
+        white-space: nowrap;
+      }
+
+      &:visited {
+        color: @primary-text-color-light;
+      }
+
+      .notification-bubble {
+        padding: 0 10px;
+        background: #ff7782;
+        color: #fff;
+        border-radius: 5px;
+      }
+
+      &:hover {
+        background-color: rgba(132, 139, 200, 0.2);
+        color: @primary-text-color-light-hover;
+        fill: @primary-text-color-light-hover;
+        border-left: 3px solid;
+        gap: 30px;
+      }
+      &.router-link-active {
+        background-color: rgba(132, 139, 200, 0.2);
+        color: @primary-text-color-light-hover;
+        fill: @primary-text-color-light-hover;
+        border-left: 3px solid;
+        gap: 30px;
+      }
+    }
+  }
+
+  .sidebar-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+    #sign-out-button {
+      justify-content: center;
+      padding: 1rem;
+      &:hover {
+        color: @primary-text-color-light-hover;
+        fill: @primary-text-color-light-hover;
+      }
+    }
+    .router-link {
+      text-decoration: none;
+      &:visited {
+        color: @primary-text-color-light;
+      }
+    }
+  }
+
+  .unicon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &.close {
+    width: 80px;
+    .sidebar-header {
+      padding: 0;
+      .user-name-tag {
+        font-size: 0;
+      }
+    }
+    .sidebar-body {
+      padding: 0;
+      align-items: center;
+      .sidebar-item {
+        gap: 0;
+        justify-content: center;
+        padding: 1rem 0;
+        width: 100%;
+        &:hover {
+          border-left: none;
+        }
+        &.router-link-active {
+          border-left: none;
+          padding: 1rem 0;
+          width: 100%;
+        }
+        .notification-bubble {
+          display: none;
+        }
+      }
+    }
+    .sidebar-footer {
+      .sidebar-item {
+        font-size: 0;
+      }
+    }
+
+    .sidebar-item {
+      .sidebar-item-text {
+        width: 0;
+        opacity: 0;
+        // font-size: 0;
+      }
+    }
+  }
+}
+
+// ===Res=== //
+
+@media screen and (max-width: 1650px) {
+  .sidebar {
+    width: 270px;
+  }
+}
