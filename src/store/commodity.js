@@ -1,5 +1,5 @@
 import axios from "axios";
-const BASE = "https://shopguitar.azurewebsites.net";
+const BASE = "https://guitarshop.azurewebsites.net";
 
 export default {
   state: {
