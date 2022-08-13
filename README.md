@@ -48,23 +48,19 @@ Then these capture down below will help you understand what happend inside.
 >> 
 >> <img width="1512" alt="Screen Shot 2022-08-13 at 14 38 20 (2)" src="https://user-images.githubusercontent.com/82819414/184474248-10d4315e-248a-441b-9405-f9027bebbde0.png">
 >
->> 
+>> When click on a specific receipt, the pop-up will show up and the manager or employee can print the receipt out as PDF file type
+>>
+>> Screen Shot 2022-08-13 at 15.09.16 (2)<img width="1512" alt="image" src="https://user-images.githubusercontent.com/82819414/184475264-430ab2b1-fbc4-49bb-b570-92bdbf46a6f0.png">
 
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+## Setting
 
-### Compiles and minifies for production
-```
-npm run build
-```
+> Last but not least, this section we built the changing password feature only (may update lots of features in the future). As you can see i've just changed my password successfully.
+>
+> Screen Shot 2022-08-13 at 15.13.14 (2)<img width="1512" alt="image" src="https://user-images.githubusercontent.com/82819414/184475394-be70326b-63ba-4f7d-b531-860570c5eb20.png">
 
-### Lints and fixes files
+### Thanks for paying your time to read and look around my repo. Here is my private account if you wanna try my website out.
 ```
-npm run lint
+Username: huyhehe
+Password: thanhhuy123
 ```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
