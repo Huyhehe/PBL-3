@@ -61,6 +61,6 @@ Then these capture down below will help you understand what happend inside.
 
 ### Thanks for paying your time to read and look around my repo. Here is my private account if you wanna try my website out.
 ```
-Username: huyhehe
-Password: thanhhuy123
+**Username**: huyhehe
+**Password**: thanhhuy123
 ```
