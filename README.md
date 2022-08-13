@@ -51,13 +51,13 @@ Then these capture down below will help you understand what happend inside.
 >
 > > When click on a specific receipt, the pop-up will show up and the manager or employee can print the receipt out as PDF file type
 > >
-> > Screen Shot 2022-08-13 at 15.09.16 (2)<img width="1512" alt="image" src="https://user-images.githubusercontent.com/82819414/184475264-430ab2b1-fbc4-49bb-b570-92bdbf46a6f0.png">
+> > <img width="1512" alt="image" src="https://user-images.githubusercontent.com/82819414/184475264-430ab2b1-fbc4-49bb-b570-92bdbf46a6f0.png">
 
 ## Setting
 
 > Last but not least, this section we built the changing password feature only (may update lots of features in the future). As you can see i've just changed my password successfully.
 >
-> Screen Shot 2022-08-13 at 15.13.14 (2)<img width="1512" alt="image" src="https://user-images.githubusercontent.com/82819414/184475394-be70326b-63ba-4f7d-b531-860570c5eb20.png">
+> <img width="1512" alt="image" src="https://user-images.githubusercontent.com/82819414/184475394-be70326b-63ba-4f7d-b531-860570c5eb20.png">
 
 ### Thanks for paying your time to read and look around my repo. Here is my private account if you wanna try my website out.
 
