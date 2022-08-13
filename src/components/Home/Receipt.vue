@@ -293,7 +293,7 @@ export default {
       const id = this.receipt.employeeId;
       const jwt = localStorage.getItem("jwt");
       const res = await axios.get(
-        `https://shopguitar.azurewebsites.net/api/Employee/employee/${id}`,
+        `https://guitarshop.azurewebsites.net/api/Employee/employee/${id}`,
         {
           headers: {
             Authorization: `Bearer ${jwt}`,
