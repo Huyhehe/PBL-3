@@ -60,8 +60,8 @@
 </template>
 
 <script>
-import Alert from "../Common Components/Alert.vue";
-import Ok from "../Common Components/Ok.vue";
+import Alert from "../common/Alert.vue";
+import Ok from "../common/Ok.vue";
 
 export default {
   components: {

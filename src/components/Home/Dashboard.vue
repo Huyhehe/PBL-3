@@ -7,9 +7,15 @@
     >
       <div class="home-container-title">Danh sách nhân viên</div>
       <div class="search-form">
-        <button @click="showAll">Xem tất cả</button>
-        <button @click="addView(true)">Thêm nhân viên mới</button>
-        <button @click="downloadFile">Tải xuống danh sách nhân viên</button>
+        <div class="w-fit" @click="showAll">
+          <MyButton content="Xem tất cả" />
+        </div>
+        <div class="w-fit" @click="addView(true)">
+          <MyButton content="Thêm nhân viên mới" iconName="plus" />
+        </div>
+        <div class="w-fit" @click="downloadFile">
+          <MyButton content="Tải xuống danh sách nhân viên" iconName="import" />
+        </div>
         <form>
           <input
             @input="filter()"
@@ -52,12 +58,14 @@
 
 <script>
 import { mapGetters } from "vuex";
-import AddEmp from "../Common Components/AddEmp.vue";
+import AddEmp from "../common/AddEmp.vue";
+import MyButton from "../common/MyButton.vue";
 import router from "@/router";
 
 export default {
   components: {
     AddEmp,
+    MyButton,
   },
   props: ["emps"],
   data() {
@@ -155,4 +163,5 @@ export default {
 <style lang="less" scoped>
 @import "~@/assets/styles/Display/HomePage/home.less";
 @import "~@/assets/link.less";
+@import "~@/assets/styles/global.less";
 </style>

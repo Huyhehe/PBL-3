@@ -53,7 +53,7 @@
 
 <script>
 import { mapState } from "vuex";
-import Alert from "../Common Components/Alert.vue";
+import Alert from "../common/Alert.vue";
 export default {
   components: {
     Alert,

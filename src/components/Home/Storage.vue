@@ -24,14 +24,12 @@
           />
         </div>
         <div class="toolbox-add">
-          <button @click="changeDisplay(true)">
-            <span>Thêm vào kho hàng</span>
-            <unicon name="plus" />
-          </button>
-          <button @click="downloadFile">
-            <span>Tải xuống kho hàng</span>
-            <unicon name="import" />
-          </button>
+          <div class="w-fit" @click="changeDisplay(true)">
+            <MyButton content="Thêm vào kho hàng" iconName="plus" />
+          </div>
+          <div class="w-fit" @click="downloadFile">
+            <MyButton content="Tải xuống kho hàng" iconName="import" />
+          </div>
         </div>
       </div>
       <div class="main">
@@ -193,13 +191,15 @@
 
 <script>
 import { mapGetters } from "vuex";
-import Alert from "../Common Components/Alert.vue";
-import Ok from "../Common Components/Ok.vue";
+import Alert from "../common/Alert.vue";
+import Ok from "../common/Ok.vue";
+import MyButton from "../common/MyButton.vue";
 
 export default {
   components: {
     Alert,
     Ok,
+    MyButton,
   },
   data() {
     return {
@@ -467,4 +467,5 @@ export default {
 
 <style lang="less" scoped>
 @import "~@/assets/styles/Display/Storage/storage.less";
+@import "~@/assets/styles/global.less";
 </style>

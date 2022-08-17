@@ -2,9 +2,8 @@
   <div class="message">
     <h1 class="title">Thông báo</h1>
     <div class="message-container">
-      <div class="message-add" @click="popUp(true)" v-if="isManager">
-        <span>Thêm thông báo mới</span>
-        <unicon name="plus" />
+      <div class="w-fit" @click="popUp(true)" v-if="isManager">
+        <MyButton content="Thêm thông báo mới" iconName="plus" />
       </div>
       <div class="message-box-view">
         <div
@@ -92,7 +91,11 @@
 
 <script>
 import { mapGetters } from "vuex";
+import MyButton from "../common/MyButton.vue";
 export default {
+  components: {
+    MyButton,
+  },
   data() {
     return {
       messageList: [],
@@ -171,4 +174,5 @@ export default {
 
 <style lang="less" scoped>
 @import "~@/assets/styles/Display/Message/message.less";
+@import "~@/assets/styles/global.less";
 </style>

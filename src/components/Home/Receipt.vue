@@ -7,9 +7,8 @@
       <span>Hóa đơn</span>
     </div>
     <div class="receipt-display">
-      <div class="receipt-add-button" @click="changeDisplay(true)">
-        <span>Thêm hóa đơn mới</span>
-        <unicon name="plus" />
+      <div @click="changeDisplay(true)" class="w-fit">
+        <MyButton content="Thêm hóa đơn mới" iconName="plus" />
       </div>
       <div class="receipt-content">
         <div class="receipt-box-view">
@@ -167,12 +166,13 @@
 </template>
 
 <script>
-import LineChart from "../Common Components/LineChart.vue";
+import LineChart from "../common/LineChart.vue";
 import axios from "axios";
 import { mapGetters } from "vuex";
-import singleReceipt from "../Common Components/singleReceipt.vue";
-import Alert from "../Common Components/Alert.vue";
-import Ok from "../Common Components/Ok.vue";
+import singleReceipt from "../common/singleReceipt.vue";
+import Alert from "../common/Alert.vue";
+import Ok from "../common/Ok.vue";
+import MyButton from "../common/MyButton.vue";
 
 export default {
   components: {
@@ -180,6 +180,7 @@ export default {
     LineChart,
     Alert,
     Ok,
+    MyButton,
   },
   data() {
     return {
@@ -434,4 +435,5 @@ export default {
 
 <style lang="less" scoped>
 @import "~@/assets/styles/Display/Receipt/receipt.less";
+@import "~@/assets/styles/global.less";
 </style>

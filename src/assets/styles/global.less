@@ -1,0 +1,43 @@
+@import "~@/assets/variables.less";
+
+.w-fit {
+  width: fit-content;
+}
+.flex {
+  display: flex;
+}
+.items-center {
+  align-items: center;
+}
+
+.button {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid @primary-text-color-light;
+  width: fit-content;
+  border-radius: 5px;
+  padding: 5px;
+  cursor: pointer;
+  color: @primary-text-color-light;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+
+  .unicon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    fill: @primary-text-color-light;
+  }
+
+  &:hover {
+    background-color: @primary-text-color-light-hover;
+    border-color: @primary-text-color-light-hover;
+    color: @background-color-light;
+
+    .unicon {
+      fill: @background-color-light;
+    }
+  }
+}

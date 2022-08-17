@@ -10,7 +10,7 @@
 
 <script>
 import { mapActions, mapGetters } from "vuex";
-import Sidebar from "../components/Common Components/Sidebar.vue";
+import Sidebar from "../components/common/Sidebar.vue";
 export default {
   components: {
     Sidebar,
