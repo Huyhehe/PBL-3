@@ -9,6 +9,10 @@ Then these capture down below will help you understand what happend inside.
 
 ## Home (valid on manager view only)
 
+> Main display
+>
+> <img width="1800" alt="Screen Shot 2022-08-17 at 12 59 51" src="https://user-images.githubusercontent.com/82819414/185045697-c826189a-3ae8-446f-8aaf-b0e62cd0dced.png">
+>
 > Add new employee or new mananger
 >
 > <img width="1512" alt="Screen Shot 2022-08-13 at 09 22 14 (2)" src="https://user-images.githubusercontent.com/82819414/184465408-845fe13b-773f-4988-9653-804f7bd92f85.png">
